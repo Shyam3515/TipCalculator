@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calc</title>
+    <link rel="stylesheet" href="cTip.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Bill -->
+        <div class="billContainer">
+            <div class="title">Bill Amount</div>
+            <div class="inputContainer">
+                <span class="char">$</span>
+                <input type='text' placeholder="0.00" id="billTotal" onkeyup="calculateBill()"/>
+            </div>
+        </div>
+        <!-- Tip -->
+        <div class="tipContainer">
+            <div class="title">Tip</div>
+            <div class="inputContainer">
+                <span class="char">%</span>
+                <input type='text' placeholder="10" id="tipTotal" onkeyup="calculateBill()"/>
+            </div>
+        </div>
+        <!-- Amount -->
+        <div class="resultContainer">
+            <!-- Left Container -->
+            <div class="leftContainer">
+                <div class="title">People</div>
+                <div class="buttons">
+                    <span class="btnContainer">
+                        <button class="btn" onclick="increasePeople()">+</button>
+                    </span>  
+                    <span class="number" id="numberOfPeople">1</span>
+                    <span class="btnContainer">
+                        <button class="btn" onclick="decreasePeople()">-</button>
+                    </span>  
+                </div>
+            </div>
+            <!-- Right Container -->
+            <div class="rightContainer">
+                <div class="title">Total per Person</div>
+                <div class="total" id="perPersonTotal">$0.00</div>
+            </div>
+        </div>
+    </div>
+    <!-- circle -->
+    <div class="circle">
+        <div class="btncen">
+            <button class="bit">+</button>
+        </div>
+    </div>
+
+    <script src="cTip.js"></script>
+</body>
+</html>
